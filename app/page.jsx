@@ -1,6 +1,6 @@
 'use client';
 import { useEffect } from 'react';
-import styles from './page.module.scss';
+import styles from './styles.module.scss';
 
 const Home = () => {
   useEffect(() => {
