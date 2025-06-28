@@ -1,6 +1,7 @@
 'use client';
+import styles from './style.module.scss';
 import { useState } from 'react';
-import styles from './styles.module.scss';
+import Nav from './navigation/page.jsx';
 
 const Header = () => {
   const [isActive, setIsActive] = useState(false);
@@ -17,6 +18,7 @@ const Header = () => {
           className={`${styles.burger} ${isActive ? styles.burgerActive : ''}`}
         ></div>
       </div>
+      {isActive && <Nav />}
     </>
   );
 };
