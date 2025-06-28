@@ -2,6 +2,7 @@
 import styles from './style.module.scss';
 import { useState } from 'react';
 import Nav from './navigation/page.jsx';
+import { AnimatePresence } from 'framer-motion';
 
 const Header = () => {
   const [isActive, setIsActive] = useState(false);
@@ -18,7 +19,7 @@ const Header = () => {
           className={`${styles.burger} ${isActive ? styles.burgerActive : ''}`}
         ></div>
       </div>
-      {isActive && <Nav />}
+      <AnimatePresence mode='wait'>{isActive && <Nav />}</AnimatePresence>
     </>
   );
 };

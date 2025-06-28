@@ -1,5 +1,9 @@
+'use client';
 import styles from './style.module.scss';
 import Link from './Link/page.jsx';
+import { motion } from 'framer-motion';
+import { menuSlide } from '../anim.js';
+import Footer from './Footer/page.jsx';
 
 const Nav = () => {
   const navItems = [
@@ -9,8 +13,20 @@ const Nav = () => {
     { title: 'Contact', href: '/contact' },
   ];
 
+  const socialLinks = [
+    { title: 'GitHub', href: '#' },
+    { title: 'Twitter', href: '#' },
+    { title: 'LinkedIn', href: '#' },
+  ];
+
   return (
-    <div className={styles.menu}>
+    <motion.div
+      variants={menuSlide}
+      initial='initial'
+      animate='enter'
+      exit='exit'
+      className={styles.menu}
+    >
       <div className={styles.body}>
         <div className={styles.nav}>
           <div className={styles.header}>
@@ -20,8 +36,9 @@ const Nav = () => {
             return <Link data={{ ...item, index }} key={index} href='' />;
           })}
         </div>
+        <Footer />
       </div>
-    </div>
+    </motion.div>
   );
 };
 
