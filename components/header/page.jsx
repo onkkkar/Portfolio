@@ -9,15 +9,19 @@ const Header = () => {
 
   return (
     <>
-      <div
-        onClick={() => {
-          setIsActive(!isActive);
-        }}
-        className={styles.button}
-      >
+      <div className={styles.headerButtonContainer}>
         <div
-          className={`${styles.burger} ${isActive ? styles.burgerActive : ''}`}
-        ></div>
+          onClick={() => {
+            setIsActive(!isActive);
+          }}
+          className={styles.button}
+        >
+          <div
+            className={`${styles.burger} ${
+              isActive ? styles.burgerActive : ''
+            }`}
+          ></div>
+        </div>
       </div>
       <AnimatePresence mode='wait'>{isActive && <Nav />}</AnimatePresence>
     </>

@@ -1,19 +1,26 @@
-.button {
+.headerButtonContainer {
   position: fixed;
-  right: 0;
-  margin: 20px;
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  background-color: #455ce9;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 2;
+  right: 0px;
+  z-index: 20;
+
+  .button {
+    position: relative;
+    margin: 20px;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #1c1d20;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 21;
+  }
 
   .burger {
     width: 100%;
+    position: relative;
+    z-index: 1;
     &::after,
     &::before {
       content: '';
@@ -37,13 +44,13 @@
 
   .burgerActive {
     &::after {
-      top: -1px;
       transform: rotate(45deg);
+      top: -1px;
     }
 
     &::before {
       transform: rotate(-45deg);
-      top: 1px;
+      top: 0px;
     }
   }
 }

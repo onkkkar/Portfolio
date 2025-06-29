@@ -31,11 +31,13 @@ const Nav = () => {
       <div className={styles.body}>
         <div className={styles.nav}>
           <div className={styles.header}>
-            <p>Navigation</p>
+            <h5>Navigation</h5>
           </div>
-          {navItems.map((item, index) => {
-            return <Link data={{ ...item, index }} key={index} href='' />;
-          })}
+          <div>
+            {navItems.map((item, index) => {
+              return <Link data={{ ...item, index }} key={index} href='' />;
+            })}
+          </div>
         </div>
         <Footer />
       </div>

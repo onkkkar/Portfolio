@@ -1,16 +1,31 @@
 'use client';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import styles from './page.module.css';
+import PreLoader from '@/components/PreLoader/page.jsx';
+import { AnimatePresence } from 'framer-motion';
 
 const Home = () => {
+  const [isLoading, setIsLoading] = useState(true);
+
   useEffect(() => {
     (async () => {
       const LocomotiveScroll = (await import('locomotive-scroll')).default;
       const locomotiveScroll = new LocomotiveScroll();
+
+      setTimeout(() => {
+        setIsLoading(false);
+        document.body.style.cursor = 'default';
+      }, 2000);
     })();
   }, []);
 
-  return <div className={styles.main}>Portfolio</div>;
+  return (
+    <main className={styles.main}>
+      <AnimatePresence mode='wait'>
+        {isLoading && <PreLoader />};
+      </AnimatePresence>
+    </main>
+  );
 };
 
 export default Home;
