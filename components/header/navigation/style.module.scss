@@ -2,7 +2,8 @@
   position: fixed;
   right: 0;
   height: 100vh;
-  background-color: var(--color-dark);
+  background-color: rgb(41, 41, 41);
+
   color: white;
 
   .body {
@@ -52,7 +53,7 @@
         text-decoration: none;
         color: white;
         font-weight: 300;
-        font-size: 12px;
+        font-size: 1em;
       }
     }
 

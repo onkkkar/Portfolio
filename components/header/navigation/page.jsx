@@ -4,6 +4,7 @@ import Link from './Link/page.jsx';
 import { motion } from 'framer-motion';
 import { menuSlide } from '../anim.js';
 import Footer from './Footer/page.jsx';
+import Curve from './Curve/page.jsx';
 
 const Nav = () => {
   const navItems = [
@@ -38,6 +39,7 @@ const Nav = () => {
         </div>
         <Footer />
       </div>
+      <Curve />
     </motion.div>
   );
 };
