@@ -23,10 +23,6 @@
   --color-border-light: rgba(255, 255, 255, 0.2);
 }
 
-* {
-  /* outline: 1px solid red; */
-}
-
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -46,6 +42,11 @@ body {
   color: var(--background);
   font-family: var(--font-sans), sans-serif;
   overflow: hidden;
-  cursor: wait !important;
+  /* cursor: wait !important; */
   margin: 0px;
+  height: 70vh;
+}
+
+* {
+  /* outline: 1px solid red; */
 }
