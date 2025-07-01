@@ -1,15 +1,14 @@
 'use client';
-import React from 'react';
 import styles from './style.module.scss';
 
-const Project = ({ index, title, setModal }) => {
+export default function index({ index, title, setModal }) {
   return (
     <div
       onMouseEnter={() => {
-        setModal({ active: true, index: index });
+        setModal({ active: true, index });
       }}
       onMouseLeave={() => {
-        setModal({ active: false, index: index });
+        setModal({ active: false, index });
       }}
       className={styles.project}
     >
@@ -17,6 +16,4 @@ const Project = ({ index, title, setModal }) => {
       <p>Design & Development</p>
     </div>
   );
-};
-
-export default Project;
+}

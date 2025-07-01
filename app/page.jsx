@@ -49,18 +49,19 @@ const Home = () => {
   return (
     <main className={styles.main}>
       {/* <AnimatePresence mode='wait'>
-        {isLoading && <PreLoader />};
+      {isLoading && <PreLoader />};
       </AnimatePresence> */}
-
       <div className={styles.body}>
-        {projects.map((project, index) => (
-          <Project
-            key={index}
-            index={index}
-            title={project.title}
-            setModal={setModal}
-          />
-        ))}
+        {projects.map((project, index) => {
+          return (
+            <Project
+              index={index}
+              title={project.title}
+              setModal={setModal}
+              key={index}
+            />
+          );
+        })}
       </div>
       <Modal modal={modal} projects={projects} />
     </main>

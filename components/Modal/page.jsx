@@ -1,13 +1,26 @@
-'use client';
-
-import styles from './style.module.scss';
-import Image from 'next/image';
+import { useRef, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { scaleAnimation } from './anim.js';
-import { useEffect, useRef } from 'react';
-import { gsap } from 'gsap';
+import Image from 'next/image';
+import styles from './style.module.scss';
+import gsap from 'gsap';
 
-const Modal = ({ modal, projects }) => {
+const scaleAnimation = {
+  initial: { scale: 0, x: '-50%', y: '-50%' },
+  enter: {
+    scale: 1,
+    x: '-50%',
+    y: '-50%',
+    transition: { duration: 0.4, ease: [0.76, 0, 0.24, 1] },
+  },
+  closed: {
+    scale: 0,
+    x: '-50%',
+    y: '-50%',
+    transition: { duration: 0.4, ease: [0.32, 0, 0.67, 0] },
+  },
+};
+
+export default function index({ modal, projects }) {
   const { active, index } = modal;
   const modalContainer = useRef(null);
   const cursor = useRef(null);
@@ -23,7 +36,6 @@ const Modal = ({ modal, projects }) => {
       duration: 0.8,
       ease: 'power3',
     });
-
     //Move cursor
     let xMoveCursor = gsap.quickTo(cursor.current, 'left', {
       duration: 0.5,
@@ -58,9 +70,9 @@ const Modal = ({ modal, projects }) => {
     <>
       <motion.div
         ref={modalContainer}
-        varaints={scaleAnimation}
+        variants={scaleAnimation}
         initial='initial'
-        animate={active ? 'open' : 'close'}
+        animate={active ? 'enter' : 'closed'}
         className={styles.modalContainer}
       >
         <div style={{ top: index * -100 + '%' }} className={styles.modalSlider}>
@@ -84,23 +96,21 @@ const Modal = ({ modal, projects }) => {
         </div>
       </motion.div>
       <motion.div
-        varaints={scaleAnimation}
-        initial='initial'
-        animate={active ? 'open' : 'close'}
         ref={cursor}
         className={styles.cursor}
+        variants={scaleAnimation}
+        initial='initial'
+        animate={active ? 'enter' : 'closed'}
       ></motion.div>
       <motion.div
-        varaints={scaleAnimation}
-        initial='initial'
-        animate={active ? 'open' : 'close'}
         ref={cursorLabel}
         className={styles.cursorLabel}
+        variants={scaleAnimation}
+        initial='initial'
+        animate={active ? 'enter' : 'closed'}
       >
         View
       </motion.div>
     </>
   );
-};
-
-export default Modal;
+}
