@@ -4,6 +4,7 @@ import styles from './page.module.css';
 import PreLoader from '@/components/PreLoader/page.jsx';
 import { AnimatePresence } from 'framer-motion';
 import Project from '@/components/Project/page.jsx';
+import Modal from '@/components/Modal/page.jsx';
 
 const projects = [
   {
@@ -47,9 +48,9 @@ const Home = () => {
 
   return (
     <main className={styles.main}>
-      <AnimatePresence mode='wait'>
+      {/* <AnimatePresence mode='wait'>
         {isLoading && <PreLoader />};
-      </AnimatePresence>
+      </AnimatePresence> */}
 
       <div className={styles.body}>
         {projects.map((project, index) => (
@@ -61,6 +62,7 @@ const Home = () => {
           />
         ))}
       </div>
+      <Modal modal={modal} projects={projects} />
     </main>
   );
 };

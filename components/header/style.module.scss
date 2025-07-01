@@ -1,7 +1,68 @@
+.header {
+  position: absolute;
+  top: 0;
+  color: black;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  padding: 35px;
+
+  .logo {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    p {
+      margin: 8px 4px;
+      transition: all 0.5s cubic-bezier(0.76, 0.24.1);
+    }
+
+    .name {
+      display: flex;
+      overflow: hidden;
+      white-space: nowrap;
+      position: relative;
+
+      .codeBy {
+        padding-left: 0.3em;
+      }
+
+      .onkar {
+        padding-left: 0.3em;
+      }
+
+      .patel {
+        position: absolute;
+        left: 150px;
+        padding-left: 0.3em;
+      }
+    }
+
+    &:hover {
+      .name {
+        padding-left: 30px;
+
+        .codeBy {
+          transform: translateX(-100%);
+        }
+
+        .onkar {
+          transform: translateX(-100px);
+        }
+
+        .patel {
+          transform: translateX(-105px);
+        }
+      }
+    }
+  }
+}
+
 .headerButtonContainer {
+  // transform: scale(0);
   position: fixed;
   right: 0px;
-  z-index: 20;
+  z-index: 4;
 
   .button {
     position: relative;
@@ -14,7 +75,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 21;
   }
 
   .burger {

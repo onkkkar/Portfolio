@@ -2,14 +2,14 @@
 import React from 'react';
 import styles from './style.module.scss';
 
-export default function index({ index, title, setModal }) {
+const Project = ({ index, title, setModal }) => {
   return (
     <div
       onMouseEnter={() => {
-        setModal({ active: true, index });
+        setModal({ active: true, index: index });
       }}
       onMouseLeave={() => {
-        setModal({ active: false, index });
+        setModal({ active: false, index: index });
       }}
       className={styles.project}
     >
@@ -17,4 +17,6 @@ export default function index({ index, title, setModal }) {
       <p>Design & Development</p>
     </div>
   );
-}
+};
+
+export default Project;

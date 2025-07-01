@@ -41,7 +41,7 @@ body {
   background: var(--foreground);
   color: var(--background);
   font-family: var(--font-sans), sans-serif;
-  overflow: hidden;
+  /* overflow: hidden; */
   /* cursor: wait !important; */
   margin: 0px;
   height: 70vh;
