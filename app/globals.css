@@ -42,7 +42,7 @@ body {
   color: var(--background);
   font-family: var(--font-sans), sans-serif;
   margin: 0px;
-  /* overflow: hidden; */
+  overflow: hidden;
   /* cursor: wait !important; */
 }
 
