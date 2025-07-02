@@ -8,24 +8,24 @@
   cursor: pointer;
   transition: all 0.2s;
 
+  h2 {
+    font-size: 60px;
+    margin: 0px;
+    font-weight: 400;
+    transition: all 0.4s;
+  }
+
+  p {
+    transition: all 0.4s;
+    font-weight: 300;
+  }
+
   &:last-of-type {
     border-bottom: 1px solid rgb(201, 201, 201);
   }
 
-  h2 {
-    font-size: 60px;
-    font-weight: 400;
-    margin: 8px;
-    transition: all 0.2s linear;
-  }
-
-  p {
-    font-weight: 300;
-    transition: all 0.2s linear;
-  }
-
   &:hover {
-    opacity: 0.4;
+    opacity: 0.5;
 
     h2 {
       transform: translateX(-10px);
