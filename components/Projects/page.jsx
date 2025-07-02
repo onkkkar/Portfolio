@@ -109,6 +109,10 @@ export default function Home() {
       }}
       className={styles.projects}
     >
+      <div className={styles.container}>
+        <h5 className={styles.recentWork}> Recent Work</h5>
+      </div>
+
       <div className={styles.body}>
         {projects.map((project, index) => {
           return (

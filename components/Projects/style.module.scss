@@ -1,10 +1,32 @@
 .projects {
+  width: 100em;
   display: flex;
   align-items: center;
-  padding-left: 200px;
-  padding-right: 200px;
+  padding-left: 8vw;
+  padding-right: 8vw;
   flex-direction: column;
   margin-top: 300px;
+
+  .container {
+    width: 100%;
+    padding-bottom: 2em;
+    display: flex;
+
+    .recentWork {
+      width: 70%;
+      font-weight: 450;
+      font-style: normal;
+      width: 70%;
+      padding-left: 6vw;
+      font-size: 0.6em;
+      line-height: 1.065;
+      margin: 0 0 1em 0;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      opacity: 0.5;
+      width: 70%;
+    }
+  }
 
   .body {
     max-width: 1400px;

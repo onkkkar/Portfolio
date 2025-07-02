@@ -3,16 +3,30 @@
   width: 100%;
   justify-content: space-between;
   align-items: center;
-  padding: 50px 100px 50px 100px;
+  padding: 50px 0px 50px 0px;
   border-top: 1px solid rgb(201, 201, 201);
   cursor: pointer;
+  padding-left: 6vw;
   transition: all 0.2s;
 
-  h2 {
-    font-size: 60px;
-    margin: 0px;
-    font-weight: 400;
-    transition: all 0.4s;
+  .projectTitle {
+    width: 70%;
+    text-align: left;
+
+    h2 {
+      font-size: 60px;
+      margin: 0px;
+      font-weight: 400;
+      transition: all 0.4s;
+    }
+  }
+
+  .projectMeta {
+    width: 30%;
+    text-align: left;
+    white-space: nowrap;
+    padding-right: 3vw;
+    padding-left: 3vw;
   }
 
   p {
