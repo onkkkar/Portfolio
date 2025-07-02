@@ -1,9 +1,10 @@
 'use client';
-import { useEffect, useState } from 'react';
 import styles from './page.module.css';
-import PreLoader from '@/components/PreLoader/page.jsx';
+import { useEffect, useState } from 'react';
 import { AnimatePresence } from 'framer-motion';
-import Projects from '@/components/Projects/page.jsx';
+import PreLoader from '../components/PreLoader/page.jsx';
+import Projects from '../components/Projects/page.jsx';
+import Description from '../components/Description/page.jsx';
 
 const Home = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -24,8 +25,9 @@ const Home = () => {
   return (
     <main className={styles.main}>
       <AnimatePresence mode='wait'>
-        {isLoading && <PreLoader />};
+        {isLoading && <PreLoader />}
       </AnimatePresence>
+      <Description />
       <Projects />
     </main>
   );
