@@ -24,9 +24,9 @@ const Home = () => {
 
   return (
     <main className={styles.main}>
-      <AnimatePresence mode='wait'>
+      {/* <AnimatePresence mode='wait'>
         {isLoading && <PreLoader />}
-      </AnimatePresence>
+      </AnimatePresence> */}
       <Description />
       <Projects />
     </main>
