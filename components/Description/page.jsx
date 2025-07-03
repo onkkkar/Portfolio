@@ -2,6 +2,7 @@ import styles from './style.module.scss';
 import { useInView, motion } from 'framer-motion';
 import { useRef } from 'react';
 import { slideUp, opacity } from './anim.js';
+import Button from '../../common/RoundedButton/page.jsx';
 
 const Description = () => {
   const phrase =
@@ -32,9 +33,9 @@ const Description = () => {
           me in a unique place in the web design world.
         </motion.p>
         <div data-scroll data-scroll-speed={0.1}>
-          <div className={styles.button}>
+          <Button className={styles.button}>
             <p>About me</p>
-          </div>
+          </Button>
         </div>
       </div>
     </div>
