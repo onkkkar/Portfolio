@@ -7,6 +7,7 @@ import Nav from './navigation/page.jsx';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Rounded from '../../common/RoundedButton/page.jsx';
+import Magnetic from '@/common/Magnetic/page.jsx';
 
 export default function index() {
   const header = useRef(null);
@@ -55,18 +56,24 @@ export default function index() {
           </div>
         </div>
         <div className={styles.nav}>
-          <div className={styles.el}>
-            <a>Work</a>
-            <div className={styles.indicator}></div>
-          </div>
-          <div className={styles.el}>
-            <a>About</a>
-            <div className={styles.indicator}></div>
-          </div>
-          <div className={styles.el}>
-            <a>Contact</a>
-            <div className={styles.indicator}></div>
-          </div>
+          <Magnetic>
+            <div className={styles.el}>
+              <a>Work</a>
+              <div className={styles.indicator}></div>
+            </div>
+          </Magnetic>
+          <Magnetic>
+            <div className={styles.el}>
+              <a>About</a>
+              <div className={styles.indicator}></div>
+            </div>
+          </Magnetic>
+          <Magnetic>
+            <div className={styles.el}>
+              <a>Contact</a>
+              <div className={styles.indicator}></div>
+            </div>
+          </Magnetic>
         </div>
       </div>
       <div ref={button} className={styles.headerButtonContainer}>
