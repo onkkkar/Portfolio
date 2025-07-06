@@ -5,6 +5,7 @@ import Project from './Project/page.jsx';
 import { motion } from 'framer-motion';
 import gsap from 'gsap';
 import Image from 'next/image';
+import Rounded from '../../common/RoundedButton/page.jsx';
 
 const projects = [
   {
@@ -125,6 +126,11 @@ export default function Home() {
           );
         })}
       </div>
+
+      <Rounded>
+        <p>Hire Me</p>
+      </Rounded>
+
       <>
         <motion.div
           ref={modalContainer}
