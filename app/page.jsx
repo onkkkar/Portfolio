@@ -5,6 +5,7 @@ import { AnimatePresence } from 'framer-motion';
 import PreLoader from '../components/PreLoader/page.jsx';
 import Projects from '../components/Projects/page.jsx';
 import Description from '../components/Description/page.jsx';
+import Contact from '@/components/Contact/page.jsx';
 
 const Home = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -24,11 +25,12 @@ const Home = () => {
 
   return (
     <main className={styles.main}>
-      <AnimatePresence mode='wait'>
+      {/* <AnimatePresence mode='wait'>
         {isLoading && <PreLoader />}
-      </AnimatePresence>
+      </AnimatePresence> */}
       <Description />
       <Projects />
+      <Contact />
     </main>
   );
 };
