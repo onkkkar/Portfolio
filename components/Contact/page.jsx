@@ -38,7 +38,7 @@ const Contact = () => {
         trigger: container.current,
         start: '0% 100%',
         end: '100% 100%',
-        scrub: 1,
+        scrub: 0.5,
       },
     });
     tl.to(
@@ -53,9 +53,11 @@ const Contact = () => {
 
   return (
     <motion.div style={{ y }} ref={container} className={styles.contact}>
+      {/* SEemicircular tTransition */}
       <div ref={circleRef} className={styles.circleDiv}>
         <div className={styles.circle}></div>
       </div>
+
       <div className={styles.body}>
         <div className={styles.title}>
           <span>
@@ -96,7 +98,6 @@ const Contact = () => {
         </div>
 
         <div className={styles.info}>
-          <div></div>
           <div>
             <span>
               <h3>socials</h3>

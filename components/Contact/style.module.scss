@@ -4,7 +4,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #141516;
+  background-color: #ededed;
   position: relative;
   width: 100vw;
 
@@ -15,7 +15,7 @@
 
     .circle {
       position: absolute;
-      height: 1550%;
+      height: 1600%;
       width: 120%;
       left: -10%;
       border-radius: 0% 0% 50% 50%;
@@ -26,7 +26,7 @@
   }
 
   .body {
-    padding-top: 200px;
+    padding-top: 100px;
     width: 100%;
     max-width: 1800px;
     background-color: #141516;

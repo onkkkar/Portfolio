@@ -28,7 +28,7 @@ const Home = () => {
       <AnimatePresence mode='wait'>
         {isLoading && <PreLoader />}
       </AnimatePresence>
-      <section id='home'>
+      <section id='about'>
         <Description />
       </section>
       <section id='work'>
