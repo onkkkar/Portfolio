@@ -72,6 +72,7 @@
           transform: scale(1);
         }
       }
+
       .indicator {
         position: absolute;
         width: 5px;
@@ -113,7 +114,7 @@
     width: 100%;
     position: relative;
     z-index: 1;
-    // border: 1px solid white;
+
     &::after,
     &::before {
       content: '';

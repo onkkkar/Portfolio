@@ -9,7 +9,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Rounded from '../../common/RoundedButton/page.jsx';
 import Magnetic from '@/common/Magnetic/page.jsx';
 
-export default function index() {
+export default function Index() {
   const header = useRef(null);
   const [isActive, setIsActive] = useState(false);
   const pathname = usePathname();
@@ -21,6 +21,24 @@ export default function index() {
 
   useLayoutEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
+
+    // Animate header from top AFTER preloader ends
+    gsap.fromTo(
+      header.current,
+      {
+        y: -100,
+        opacity: 0,
+      },
+      {
+        y: 0,
+        opacity: 1,
+        delay: 3.4,
+        duration: 2,
+        ease: 'power4.out',
+      },
+    );
+
+    // Scroll-triggered button animation
     gsap.to(button.current, {
       scrollTrigger: {
         trigger: document.documentElement,
@@ -34,11 +52,12 @@ export default function index() {
           });
         },
         onEnterBack: () => {
-          gsap.to(
-            button.current,
-            { scale: 0, duration: 0.25, ease: 'power1.out' },
-            setIsActive(false),
-          );
+          gsap.to(button.current, {
+            scale: 0,
+            duration: 0.25,
+            ease: 'power1.out',
+          });
+          setIsActive(false);
         },
       },
     });
@@ -56,7 +75,11 @@ export default function index() {
 
   return (
     <>
-      <div ref={header} className={styles.header}>
+      <div
+        ref={header}
+        className={styles.header}
+        style={{ opacity: 0, transform: 'translateY(-100px)' }} // hide before GSAP runs
+      >
         <Magnetic>
           <div className={styles.logo}>
             <p className={styles.copyright}>©</p>
@@ -67,6 +90,7 @@ export default function index() {
             </div>
           </div>
         </Magnetic>
+
         <div className={styles.nav}>
           <Magnetic>
             <div className={styles.el}>
@@ -88,6 +112,7 @@ export default function index() {
           </Magnetic>
         </div>
       </div>
+
       <div ref={button} className={styles.headerButtonContainer}>
         <Rounded
           onClick={() => {
@@ -102,6 +127,7 @@ export default function index() {
           ></div>
         </Rounded>
       </div>
+
       <AnimatePresence mode='wait'>{isActive && <Nav />}</AnimatePresence>
     </>
   );
