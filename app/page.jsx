@@ -6,6 +6,7 @@ import PreLoader from '../components/PreLoader/page.jsx';
 import Projects from '../components/Projects/page.jsx';
 import Description from '../components/Description/page.jsx';
 import Contact from '@/components/Contact/page.jsx';
+import Landing from '@/components/Landing/page.jsx';
 
 const Home = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -28,6 +29,9 @@ const Home = () => {
       <AnimatePresence mode='wait'>
         {isLoading && <PreLoader />}
       </AnimatePresence>
+      <section id='home'>
+        <Landing />
+      </section>
       <section id='about'>
         <Description />
       </section>
