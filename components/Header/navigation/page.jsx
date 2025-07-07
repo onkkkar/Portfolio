@@ -8,10 +8,10 @@ import Curve from './Curve/page.jsx';
 
 const Nav = () => {
   const navItems = [
-    { title: 'Home', href: '/' },
-    { title: 'Work', href: '/work' },
-    { title: 'About', href: '/about' },
-    { title: 'Contact', href: '/contact' },
+    { title: 'Home', href: '#home' },
+    { title: 'Work', href: '#work' },
+    { title: 'About', href: '#about' },
+    { title: 'Contact', href: '#contact' },
   ];
 
   const socialLinks = [
@@ -35,7 +35,9 @@ const Nav = () => {
           </div>
           <div>
             {navItems.map((item, index) => {
-              return <Link data={{ ...item, index }} key={index} href='' />;
+              return (
+                <Link data={{ ...item, index }} key={index} href={item.href} />
+              );
             })}
           </div>
         </div>

@@ -9,6 +9,17 @@ const Description = () => {
     'Helping brands to stand out in the digital era. Together we will set the new status quo. No nonsense, always on the cutting edge.';
   const description = useRef(null);
   const isInView = useInView(description);
+
+  const handleAboutClick = () => {
+    const aboutSection = document.getElementById('about');
+    if (aboutSection) {
+      aboutSection.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+      });
+    }
+  };
+
   return (
     <div ref={description} className={styles.description}>
       <div className={styles.body}>
@@ -33,7 +44,7 @@ const Description = () => {
           me in a unique place in the web design world.
         </motion.p>
         <div data-scroll data-scroll-speed={0.1}>
-          <Button className={styles.button}>
+          <Button className={styles.button} onClick={handleAboutClick}>
             <p>About me</p>
           </Button>
         </div>

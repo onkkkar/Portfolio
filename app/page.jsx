@@ -25,12 +25,18 @@ const Home = () => {
 
   return (
     <main className={styles.main}>
-      {/* <AnimatePresence mode='wait'>
+      <AnimatePresence mode='wait'>
         {isLoading && <PreLoader />}
-      </AnimatePresence> */}
-      <Description />
-      <Projects />
-      <Contact />
+      </AnimatePresence>
+      <section id='home'>
+        <Description />
+      </section>
+      <section id='work'>
+        <Projects />
+      </section>
+      <section id='contact'>
+        <Contact />
+      </section>
     </main>
   );
 };

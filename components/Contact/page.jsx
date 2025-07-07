@@ -1,8 +1,12 @@
 import styles from './style.module.scss';
 import Rounded from '../../common/RoundedButton/page.jsx';
-import { useRef } from 'react';
+import { useRef, useEffect } from 'react';
 import { useScroll, motion, useTransform, useSpring } from 'framer-motion';
 import Magnetic from '../../common/Magnetic/page.jsx';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
 
 const Contact = () => {
   const container = useRef(null);
@@ -16,19 +20,42 @@ const Contact = () => {
   const rawX = useTransform(scrollYProgress, [0, 1], [0, 150]);
   const rawRotate = useTransform(scrollYProgress, [0, 1], [120, 90]);
 
+  const footerRef = useRef(null);
+  const circleRef = useRef(null);
+
   // CHANGED: apply spring for smoother animation
   const x = useSpring(rawX, { stiffness: 50, damping: 15 });
+  const y = useTransform(scrollYProgress, [0, 1], [-50, 0]);
   const rotate = useSpring(rawRotate, { stiffness: 40, damping: 12 });
-  const y = useTransform(scrollYProgress, [0, 1], [-10, 0]);
 
-  const opacity = useTransform(scrollYProgress, [0, 1], [0, 1]);
+  // const opacity = useTransform(scrollYProgress, [0, 1], [0, 1]);
+
+  useEffect(() => {
+    if (!circleRef.current || !container.current) return;
+
+    let tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: container.current,
+        start: '0% 100%',
+        end: '100% 100%',
+        scrub: 1,
+      },
+    });
+    tl.to(
+      circleRef.current,
+      {
+        height: 0,
+        ease: 'none',
+      },
+      0,
+    );
+  }, []);
 
   return (
-    <motion.div
-      style={{ y, opacity }}
-      ref={container}
-      className={styles.contact}
-    >
+    <motion.div style={{ y }} ref={container} className={styles.contact}>
+      <div ref={circleRef} className={styles.circleDiv}>
+        <div className={styles.circle}></div>
+      </div>
       <div className={styles.body}>
         <div className={styles.title}>
           <span>

@@ -1,9 +1,21 @@
 import styles from './style.module.scss';
-import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { slide } from '../../anim.js';
 
 const Index = ({ data }) => {
+  const handleClick = (e) => {
+    e.preventDefault();
+    const targetId = data.href.replace('#', '');
+    const targetElement = document.getElementById(targetId);
+
+    if (targetElement) {
+      targetElement.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+      });
+    }
+  };
+
   return (
     <motion.div
       custom={data.index}
@@ -13,7 +25,9 @@ const Index = ({ data }) => {
       animate='enter'
       exit='exit'
     >
-      <Link href={data.href}>{data.title}</Link>
+      <a href={data.href} onClick={handleClick}>
+        {data.title}
+      </a>
     </motion.div>
   );
 };

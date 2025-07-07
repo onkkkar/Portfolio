@@ -44,6 +44,16 @@ export default function index() {
     });
   }, []);
 
+  const handleNavClick = (sectionId) => {
+    const targetElement = document.getElementById(sectionId);
+    if (targetElement) {
+      targetElement.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+      });
+    }
+  };
+
   return (
     <>
       <div ref={header} className={styles.header}>
@@ -58,19 +68,19 @@ export default function index() {
         <div className={styles.nav}>
           <Magnetic>
             <div className={styles.el}>
-              <a>Work</a>
+              <a onClick={() => handleNavClick('work')}>Work</a>
               <div className={styles.indicator}></div>
             </div>
           </Magnetic>
           <Magnetic>
             <div className={styles.el}>
-              <a>About</a>
+              <a onClick={() => handleNavClick('about')}>About</a>
               <div className={styles.indicator}></div>
             </div>
           </Magnetic>
           <Magnetic>
             <div className={styles.el}>
-              <a>Contact</a>
+              <a onClick={() => handleNavClick('contact')}>Contact</a>
               <div className={styles.indicator}></div>
             </div>
           </Magnetic>
