@@ -57,14 +57,16 @@ export default function index() {
   return (
     <>
       <div ref={header} className={styles.header}>
-        <div className={styles.logo}>
-          <p className={styles.copyright}>©</p>
-          <div className={styles.name}>
-            <p className={styles.codeBy}>Code by</p>
-            <p className={styles.onkar}>Onkar</p>
-            <p className={styles.patel}>Patel</p>
+        <Magnetic>
+          <div className={styles.logo}>
+            <p className={styles.copyright}>©</p>
+            <div className={styles.name}>
+              <p className={styles.codeBy}>Code by</p>
+              <p className={styles.onkar}>Onkar</p>
+              <p className={styles.patel}>Patel</p>
+            </div>
           </div>
-        </div>
+        </Magnetic>
         <div className={styles.nav}>
           <Magnetic>
             <div className={styles.el}>
