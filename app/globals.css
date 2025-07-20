@@ -62,5 +62,14 @@ body {
   color: var(--background);
   font-family: var(--font-sans);
   margin: 0;
-  overflow: hidden;
+  overflow-x: hidden;
+
+  /* overflow-y: hidden; */
+  /* No Scrollbar Hard Way */
+  /* overflow: hidden; */
+}
+
+html,
+body {
+  height: 100%;
 }
