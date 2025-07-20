@@ -9,24 +9,32 @@ import Rounded from '../../common/RoundedButton/page.jsx';
 
 const projects = [
   {
-    title: 'C2 Montreal',
-    src: 'c2montreal.png',
+    title: 'GTA VI Site',
+    src: 'gta.webp',
     color: '#000000',
+    link: 'https://gtavi-landing-page.vercel.app/',
+    github: 'https://github.com/onkar-03/gta-vi-landing-page',
   },
   {
     title: 'Office Studio',
     src: 'officestudio.png',
     color: '#8C8C8C',
+    link: '#',
+    github: '#',
   },
   {
     title: 'Locomotive',
     src: 'locomotive.png',
     color: '#EFE8D3',
+    link: '#',
+    github: '#',
   },
   {
     title: 'Silencio',
     src: 'silencio.png',
     color: '#706D63',
+    link: '#',
+    github: '#',
   },
 ];
 
@@ -122,6 +130,8 @@ export default function Home() {
               title={project.title}
               manageModal={manageModal}
               key={index}
+              link={project.link}
+              github={project.github}
             />
           );
         })}
