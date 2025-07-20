@@ -106,8 +106,7 @@
     .info {
       display: flex;
       justify-content: space-between;
-      margin-top: 70px;
-      padding: 20px;
+      padding: 70px 40px 20px 40px;
 
       div {
         display: flex;
@@ -146,13 +145,14 @@
           display: flex;
           flex-direction: column;
           gap: 15px;
+          align-items: flex-start;
         }
 
         h3 {
           color: grey;
           cursor: default;
           font-weight: 300;
-          font-size: 1em;
+          font-size: 0.7em;
         }
       }
     }

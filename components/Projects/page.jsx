@@ -138,7 +138,7 @@ export default function Home() {
       </div>
 
       <Rounded>
-        <p>Hire Me</p>
+        <a>Hire Me</a>
       </Rounded>
 
       <>

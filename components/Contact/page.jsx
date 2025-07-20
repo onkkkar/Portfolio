@@ -6,6 +6,7 @@ import Magnetic from '../../common/Magnetic/page';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import Link from 'next/link';
+import LocalTime from '../../common/LocalTime/page';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -112,8 +113,20 @@ const Contact = () => {
 
         <div className={styles.info}>
           <div>
+            {/* Local Time Feature */}
+            <div
+              style={{
+                marginTop: '1em',
+                textAlign: 'center',
+                fontSize: '1rem',
+              }}
+            >
+              <LocalTime />
+            </div>
+          </div>
+          <div>
             <span>
-              <h3>socials</h3>
+              <h3>SOCIALS</h3>
               <Magnetic>
                 <Link
                   href='https://github.com/onkar-03'
