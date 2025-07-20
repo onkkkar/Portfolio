@@ -1,11 +1,11 @@
 'use client';
 import styles from './style.module.scss';
 import { useState, useEffect, useRef } from 'react';
-import Project from './Project/page.jsx';
+import Project from './Project/page';
 import { motion } from 'framer-motion';
 import gsap from 'gsap';
 import Image from 'next/image';
-import Rounded from '../../common/RoundedButton/page.jsx';
+import Rounded from '../../common/RoundedButton/page';
 
 const projects = [
   {

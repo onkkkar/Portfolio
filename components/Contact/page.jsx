@@ -1,8 +1,8 @@
 import styles from './style.module.scss';
-import Rounded from '../../common/RoundedButton/page.jsx';
+import Rounded from '../../common/RoundedButton/page';
 import { useRef, useEffect } from 'react';
 import { useScroll, motion, useTransform, useSpring } from 'framer-motion';
-import Magnetic from '../../common/Magnetic/page.jsx';
+import Magnetic from '../../common/Magnetic/page';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 

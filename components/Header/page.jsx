@@ -3,11 +3,11 @@ import { useEffect, useLayoutEffect, useRef, useState } from 'react';
 import styles from './style.module.scss';
 import { usePathname } from 'next/navigation';
 import { AnimatePresence } from 'framer-motion';
-import Nav from './navigation/page.jsx';
+import Nav from './navigation/page';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import Rounded from '../../common/RoundedButton/page.jsx';
-import Magnetic from '@/common/Magnetic/page.jsx';
+import Rounded from '../../common/RoundedButton/page';
+import Magnetic from '@/common/Magnetic/page';
 
 export default function Index() {
   const header = useRef(null);

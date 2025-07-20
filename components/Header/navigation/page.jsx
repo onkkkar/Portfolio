@@ -1,10 +1,10 @@
 'use client';
 import styles from './style.module.scss';
-import Link from './Link/page.jsx';
+import Link from './Link/page';
 import { motion } from 'framer-motion';
 import { menuSlide } from '../anim.js';
-import Footer from './Footer/page.jsx';
-import Curve from './Curve/page.jsx';
+import Footer from './Footer/page';
+import Curve from './Curve/page';
 
 const Nav = () => {
   const navItems = [

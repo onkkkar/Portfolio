@@ -2,11 +2,11 @@
 import styles from './page.module.css';
 import { useEffect, useState } from 'react';
 import { AnimatePresence } from 'framer-motion';
-import PreLoader from '../components/PreLoader/page.jsx';
-import Projects from '../components/Projects/page.jsx';
-import Description from '../components/Description/page.jsx';
-import Contact from '@/components/Contact/page.jsx';
-import Landing from '@/components/Landing/page.jsx';
+import PreLoader from '../components/PreLoader/page';
+import Projects from '../components/Projects/page';
+import Description from '../components/Description/page';
+import Contact from '@/components/Contact/page';
+import Landing from '@/components/Landing/page';
 
 const Home = () => {
   const [isLoading, setIsLoading] = useState(true);

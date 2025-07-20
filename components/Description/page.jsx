@@ -2,7 +2,7 @@ import styles from './style.module.scss';
 import { useInView, motion } from 'framer-motion';
 import { useRef } from 'react';
 import { slideUp, opacity } from './anim.js';
-import Button from '../../common/RoundedButton/page.jsx';
+import Button from '../../common/RoundedButton/page';
 
 const Description = () => {
   const phrase =
