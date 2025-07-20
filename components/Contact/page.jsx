@@ -5,6 +5,7 @@ import { useScroll, motion, useTransform, useSpring } from 'framer-motion';
 import Magnetic from '../../common/Magnetic/page';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+import Link from 'next/link';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -102,14 +103,32 @@ const Contact = () => {
             <span>
               <h3>socials</h3>
               <Magnetic>
-                <p>Github</p>
+                <Link
+                  href='https://github.com/onkar-03'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                >
+                  Github
+                </Link>
               </Magnetic>
             </span>
             <Magnetic>
-              <p>Twitter</p>
+              <Link
+                href='https://x.com/wannabe_sde'
+                target='_blank'
+                rel='noopener noreferrer'
+              >
+                Twitter
+              </Link>
             </Magnetic>
             <Magnetic>
-              <p>Linkedin</p>
+              <Link
+                href='https://www.linkedin.com/in/onkarpatel03/'
+                target='_blank'
+                rel='noopener noreferrer'
+              >
+                Linkedin
+              </Link>
             </Magnetic>
           </div>
         </div>
