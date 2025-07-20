@@ -91,10 +91,22 @@ const Contact = () => {
 
         <div className={styles.nav}>
           <Rounded>
-            <p>onkarpatel10@gmail.com</p>
+            <a
+              href='mailto:onkarpatel10@gmail.com'
+              target='_blank'
+              rel='noopener noreferrer'
+            >
+              onkarpatel10@gmail.com
+            </a>
           </Rounded>
           <Rounded>
-            <p>+91 7587033401</p>
+            <a
+              href='tel:+917587033401'
+              target='_blank'
+              rel='noopener noreferrer'
+            >
+              +91 7587033401
+            </a>
           </Rounded>
         </div>
 
