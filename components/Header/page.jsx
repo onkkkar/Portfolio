@@ -14,10 +14,33 @@ export default function Index() {
   const [isActive, setIsActive] = useState(false);
   const pathname = usePathname();
   const button = useRef(null);
+  const navRef = useRef(null);
 
   useEffect(() => {
     if (isActive) setIsActive(false);
   }, [pathname]);
+
+  // Click outside to close navigation
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (
+        isActive &&
+        navRef.current &&
+        !navRef.current.contains(event.target) &&
+        !button.current.contains(event.target)
+      ) {
+        setIsActive(false);
+      }
+    };
+
+    if (isActive) {
+      document.addEventListener('mousedown', handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [isActive]);
 
   useLayoutEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
@@ -128,7 +151,9 @@ export default function Index() {
         </Rounded>
       </div>
 
-      <AnimatePresence mode='wait'>{isActive && <Nav />}</AnimatePresence>
+      <AnimatePresence mode='wait'>
+        {isActive && <Nav ref={navRef} />}
+      </AnimatePresence>
     </>
   );
 }

@@ -5,9 +5,9 @@ import { motion } from 'framer-motion';
 import { menuSlide } from '../anim.js';
 import Footer from './Footer/page';
 import Curve from './Curve/page';
-import { useState } from 'react';
+import { useState, forwardRef } from 'react';
 
-const Nav = () => {
+const Nav = forwardRef((props, ref) => {
   const [activeItem, setActiveItem] = useState('Home'); // Default to Home
 
   const navItems = [
@@ -25,6 +25,7 @@ const Nav = () => {
 
   return (
     <motion.div
+      ref={ref}
       variants={menuSlide}
       initial='initial'
       animate='enter'
@@ -55,6 +56,8 @@ const Nav = () => {
       <Curve />
     </motion.div>
   );
-};
+});
+
+Nav.displayName = 'Nav';
 
 export default Nav;
