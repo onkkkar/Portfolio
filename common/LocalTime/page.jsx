@@ -42,7 +42,7 @@ export default function LocalTime() {
           textAlign: 'left',
         }}
       >
-        Local Time
+        LOCAL TIME
       </h3>
       <Magnetic>
         <span

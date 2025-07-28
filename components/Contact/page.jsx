@@ -138,9 +138,9 @@ const Contact = () => {
               <LocalTime />
             </div>
           </div>
-          <div>
-            <span>
-              <h3>SOCIALS</h3>
+          <div className={styles.socialsColumn}>
+            <h3>SOCIALS</h3>
+            <div className={styles.socialsRow}>
               <Magnetic>
                 <Link
                   href='https://github.com/onkar-03'
@@ -150,25 +150,25 @@ const Contact = () => {
                   Github
                 </Link>
               </Magnetic>
-            </span>
-            <Magnetic>
-              <Link
-                href='https://x.com/wannabe_sde'
-                target='_blank'
-                rel='noopener noreferrer'
-              >
-                Twitter
-              </Link>
-            </Magnetic>
-            <Magnetic>
-              <Link
-                href='https://www.linkedin.com/in/onkarpatel03/'
-                target='_blank'
-                rel='noopener noreferrer'
-              >
-                Linkedin
-              </Link>
-            </Magnetic>
+              <Magnetic>
+                <Link
+                  href='https://x.com/wannabe_sde'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                >
+                  Twitter
+                </Link>
+              </Magnetic>
+              <Magnetic>
+                <Link
+                  href='https://www.linkedin.com/in/onkarpatel03/'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                >
+                  Linkedin
+                </Link>
+              </Magnetic>
+            </div>
           </div>
         </div>
       </div>
