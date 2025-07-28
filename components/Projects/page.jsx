@@ -6,6 +6,7 @@ import { motion } from 'framer-motion';
 import gsap from 'gsap';
 import Image from 'next/image';
 import Rounded from '../../common/RoundedButton/page';
+import Link from 'next/link';
 
 const projects = [
   {
@@ -138,7 +139,21 @@ export default function Home() {
       </div>
 
       <Rounded>
-        <a>Hire Me</a>
+        <Link
+          href='#contact'
+          onClick={(e) => {
+            e.preventDefault();
+            const contactSection = document.getElementById('contact');
+            if (contactSection) {
+              contactSection.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start',
+              });
+            }
+          }}
+        >
+          Get In Touch
+        </Link>
       </Rounded>
 
       <>

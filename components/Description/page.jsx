@@ -6,7 +6,7 @@ import Button from '../../common/RoundedButton/page';
 
 const Description = () => {
   const phrase =
-    'Helping brands to stand out in the digital era. Together we will set the new status quo. No nonsense, always on the cutting edge.';
+    'Designing thoughtful interfaces. Building standout digital experiences. Merging creativity and code to craft products users remember.';
   const description = useRef(null);
   const isInView = useInView(description);
 
@@ -40,8 +40,9 @@ const Description = () => {
           })}
         </p>
         <motion.p variants={opacity} animate={isInView ? 'open' : 'closed'}>
-          The combination of my passion for design, code & interaction positions
-          me in a unique place in the web design world.
+          Crafting modern, user-first web experiences through a blend of design
+          sense and technical depth. Passionate about clean UI, smooth
+          performance, and standout solutions.
         </motion.p>
         <div data-scroll data-scroll-speed={0.1}>
           <Button className={styles.button} onClick={handleAboutClick}>
