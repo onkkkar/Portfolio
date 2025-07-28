@@ -10,7 +10,7 @@ import Rounded from '../../common/RoundedButton/page';
 const projects = [
   {
     title: 'GTA VI Site',
-    src: 'GTA.webp',
+    src: 'gta.webp',
     color: '#000000',
     link: 'https://gtavi-landing-page.vercel.app/',
     github: 'https://github.com/onkar-03/gta-vi-landing-page',
@@ -24,14 +24,14 @@ const projects = [
   },
   {
     title: 'TrueFeedback',
-    src: 'TrueFeedback.webp',
-    color: '#EFE8D3',
+    src: 'truefeedback.webp',
+    color: '#1E1E1E',
     link: 'https://trufeedback.vercel.app',
     github: 'https://github.com/onkar-03/truefeedback',
   },
   {
     title: 'Resumind',
-    src: 'Resumind.webp',
+    src: 'resumind.webp',
     color: '#d6d4e4',
     link: 'https://getresumind.vercel.app',
     github: 'https://github.com/onkar-03/resumind',
