@@ -5,8 +5,11 @@ import { motion } from 'framer-motion';
 import { menuSlide } from '../anim.js';
 import Footer from './Footer/page';
 import Curve from './Curve/page';
+import { useState } from 'react';
 
 const Nav = () => {
+  const [activeItem, setActiveItem] = useState('Home'); // Default to Home
+
   const navItems = [
     { title: 'Home', href: '#home' },
     { title: 'Work', href: '#work' },
@@ -36,7 +39,13 @@ const Nav = () => {
           <div>
             {navItems.map((item, index) => {
               return (
-                <Link data={{ ...item, index }} key={index} href={item.href} />
+                <Link
+                  data={{ ...item, index }}
+                  key={index}
+                  href={item.href}
+                  isActive={activeItem === item.title}
+                  setActiveItem={setActiveItem}
+                />
               );
             })}
           </div>
