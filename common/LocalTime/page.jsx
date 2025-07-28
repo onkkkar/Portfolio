@@ -28,8 +28,7 @@ export default function LocalTime() {
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'flex-start',
-        gap: '.4em',
-        marginTop: '.4em',
+        marginTop: '.2em',
       }}
     >
       <h3
