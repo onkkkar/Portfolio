@@ -23,12 +23,13 @@ export default function LocalTime() {
   }, []);
 
   return (
-    <span
+    <div
       style={{
         display: 'flex',
         flexDirection: 'column',
-        gap: '15px',
         alignItems: 'flex-start',
+        gap: '.4em',
+        marginTop: '.4em',
       }}
     >
       <h3
@@ -37,26 +38,28 @@ export default function LocalTime() {
           cursor: 'default',
           fontWeight: 300,
           fontSize: '0.7em',
+          letterSpacing: '0.1em',
           margin: 0,
-          padding: '2.5px',
-          textAlign: 'left',
         }}
       >
         LOCAL TIME
       </h3>
-      <Magnetic>
-        <span
-          style={{
-            fontSize: '1em',
-            color: 'white',
-            padding: '2.5px',
-            cursor: 'pointer',
-            textAlign: 'left',
-          }}
-        >
-          {time} GMT+5:30
-        </span>
-      </Magnetic>
-    </span>
+      <div>
+        <Magnetic>
+          <span
+            style={{
+              fontSize: '1em',
+              color: 'white',
+              padding: '0 0.2em 0 0',
+              cursor: 'pointer',
+              textAlign: 'left',
+              fontWeight: 400,
+            }}
+          >
+            {time} GMT+5:30
+          </span>
+        </Magnetic>
+      </div>
+    </div>
   );
 }
