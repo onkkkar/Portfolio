@@ -14,28 +14,28 @@ const projects = [
     src: 'gta.webp',
     color: '#000000',
     link: 'https://gtavi-landing-page.vercel.app/',
-    github: 'https://github.com/onkar-03/gta-vi-landing-page',
+    github: 'https://github.com/onkkkar/gta-vi-landing-page',
   },
   {
     title: 'NOVA - AI',
     src: 'Nova.webp',
     color: '#8C8C8C',
     link: 'https://buildwithnova.vercel.app',
-    github: 'https://github.com/onkar-03/nova',
+    github: 'https://github.com/onkkkar/nova',
   },
   {
     title: 'TrueFeedback',
     src: 'TrueFeedback.webp',
     color: '#1E1E1E',
     link: 'https://trufeedback.vercel.app',
-    github: 'https://github.com/onkar-03/truefeedback',
+    github: 'https://github.com/onkkkar/truefeedback',
   },
   {
     title: 'Resumind',
     src: 'Resumind.webp',
     color: '#d6d4e4',
     link: 'https://getresumind.vercel.app',
-    github: 'https://github.com/onkar-03/resumind',
+    github: 'https://github.com/onkkkar/resumind',
   },
 ];
 

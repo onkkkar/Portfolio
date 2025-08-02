@@ -20,7 +20,7 @@ const Footer = () => {
         </Magnetic>
         <Magnetic>
           <Link
-            href='https://github.com/onkar-03'
+            href='https://github.com/onkkkar'
             target='_blank'
             rel='noopener noreferrer'
           >
@@ -29,7 +29,7 @@ const Footer = () => {
         </Magnetic>
         <Magnetic>
           <Link
-            href='https://www.linkedin.com/in/onkarpatel03/'
+            href='https://www.linkedin.com/in/onkkkar'
             target='_blank'
             rel='noopener noreferrer'
           >
